@@ -5,5 +5,6 @@ import dbConnect from "../db/index.js"
 const app=express();
 dbConnect()
 app.use("/api/v1/auth",authRoutes)
+app.use(express.json());
 
 export default app;
